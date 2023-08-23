@@ -1,0 +1,119 @@
+
+class D {
+
+
+    static Node head=null ;
+
+
+    static Node f=null ;
+
+    class Node {
+        int data;
+        Node next;
+
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+
+    public void push(int item) {
+
+        Node ptr = new Node(item);
+
+        if (ptr == null) {
+
+            System.out.println("stack is full");
+
+        } else {
+            ptr.next=null;
+
+            if(f==null)
+            {
+                f=head=ptr;
+            }
+            else
+            {
+                head.next=ptr;
+                head=ptr;
+            }
+
+
+
+        }
+        System.out.println(head.data);
+
+
+    }
+
+
+    public void pop() {
+
+
+        int val=-1;
+        Node p=f;
+        if (f ==null) {
+            System.out.println("statck is empty");
+        } else {
+
+
+            f=f.next;
+         
+
+            System.out.println(p.data);
+
+
+        }
+    }
+}
+//    public void show()
+//    {
+//
+//
+//
+//            System.out.println(head.data);
+//
+//    }
+
+
+
+
+
+
+public class iu {
+
+
+
+
+    public static void main(String[] args) {
+
+
+D d=new D();
+
+
+        System.out.println("elemt is pushing in statck");
+       d. push(23);
+        d. push(213);
+        d. push(223);
+        d. push(234);
+        d. push(93);
+
+
+      // d. push(33);
+//        d.push(43);
+//       d. push(53);
+//        d.push(63);
+       System.out.println("elemnet is removin g in statck");
+        d.pop();
+        d.pop();
+        d.pop();
+        d.pop();
+   d.pop();
+     // d.pop();
+  //  d.show();
+
+
+
+    }
+}
